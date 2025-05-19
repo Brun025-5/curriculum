@@ -17,8 +17,10 @@
         <ul>
             <li><a href="#perfil">Perfil</a></li>
             <li><a href="#experiencia">Experiencia</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#educacion">Educación</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#referencias">Referencias</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
@@ -26,22 +28,123 @@
         <section id="perfil">
             <h2>Perfil</h2>
             <!-- Información de perfil -->
+             <img src="https://placehold.co/600x400" alt="Imagen de perfil" style="width:100%;max-width:600px;display:block;margin-bottom:16px;">
+             <div style="margin-bottom:16px;">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="Video de ejemplo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </section>
         <section id="experiencia">
             <h2>Experiencia</h2>
             <!-- Experiencia laboral -->
+             <ol>
+                <li>Ayudante de Docencia - PAO 2024 II: POO</li>
+                <li>Ayudante de Docencia - PAO 2025 I: POO</li>
+            </ol>
         </section>
+        
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <!-- Proyectos destacados -->
+             <ul>
+                <li>Elemento A</li>
+                <li>Elemento B</li>
+                <li>Elemento C</li>
+            </ul>
+        </section>
+
         <section id="educacion">
             <h2>Educación</h2>
             <!-- Estudios realizados -->
+             <p>
+                Actualmente estudio en la <a href="https://www.espol.edu.ec/es" target="_blank" rel="noopener">Escuela Superior Politécnica del Litoral (ESPOL)</a>, una de las universidades más prestigiosas de Ecuador, donde me estoy formando en el área de la computación y desarrollo profesional.
+            </p>
         </section>
         <section id="habilidades">
             <h2>Habilidades</h2>
             <!-- Habilidades técnicas y blandas -->
         </section>
+
+        <section id="referencias">
+            <h2>Referencias</h2>
+            <ul>
+                <li>
+                    <blockquote>
+                        "Bruno demostró gran responsabilidad y compromiso en todos los proyectos en los que colaboró conmigo."
+                    </blockquote>
+                    <p>
+                        <strong>María Pérez</strong><br>
+                        Gerente de Proyectos en TechSolutions<br>
+                        María fue mi supervisora directa durante dos años, donde trabajamos juntos en el desarrollo de aplicaciones web para clientes internacionales.
+                    </p>
+                </li>
+                <li>
+                    <blockquote>
+                        "Su capacidad para resolver problemas y trabajar en equipo es destacable."
+                    </blockquote>
+                    <p>
+                        <strong>Carlos Gómez</strong><br>
+                        Líder Técnico en Innovatech<br>
+                        Carlos lideró el equipo donde participé como desarrollador backend, colaborando en soluciones innovadoras para el sector educativo.
+                    </p>
+                </li>
+                <li>
+                    <blockquote>
+                        "Siempre mostró iniciativa y una actitud positiva ante los retos."
+                    </blockquote>
+                    <p>
+                        <strong>Lucía Fernández</strong><br>
+                        Coordinadora Académica en ESPOL<br>
+                        Lucía fue mi coordinadora en proyectos académicos, donde apoyé en la organización y ejecución de eventos tecnológicos.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+
         <section id="contacto">
             <h2>Contacto</h2>
             <!-- Información de contacto -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.1866698049837!2d-79.9672671304687!3d-2.1479343999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d2b2e6c2e4d%3A0x8e2a7e6e8e2e8e2a!2sEscuela%20Superior%20Politécnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1716138000000!5m2!1ses!2sec" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <form action="#" method="post" style="margin-bottom:16px;">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required style="display:block;width:100%;max-width:400px;margin-bottom:12px;">
+
+                <label for="motivo">Motivo de contacto:</label>
+                <select id="motivo" name="motivo" required style="display:block;width:100%;max-width:400px;margin-bottom:12px;">
+                    <option value="" disabled selected>Seleccione una opción</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="trabajo">Oferta de trabajo</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <fieldset style="margin-bottom:12px;">
+                    <legend>¿Cómo prefiere ser contactado?</legend>
+                    <label><input type="radio" name="contacto" value="email" required> Email</label>
+                    <label><input type="radio" name="contacto" value="telefono" required> Teléfono</label>
+                </fieldset>
+
+                <label for="intereses">Áreas de interés:</label>
+                <select id="intereses" name="intereses[]" multiple required style="display:block;width:100%;max-width:400px;height:80px;margin-bottom:12px;">
+                    <option value="desarrollo">Desarrollo</option>
+                    <option value="diseño">Diseño</option>
+                    <option value="investigacion">Investigación</option>
+                    <option value="docencia">Docencia</option>
+                </select>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required style="display:block;width:100%;max-width:400px;height:80px;margin-bottom:12px;"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
         </section>
     </main>
     <footer>
