@@ -1,0 +1,13 @@
+* {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+
+    /* Alineación del texto */
+    text-align: center;
+
+    /* Grosor de la fuente negrita */
+    font-weight: bold;
+
+}
