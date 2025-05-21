@@ -1,13 +1,51 @@
 * {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Telex", sans-serif;
 }
 
 h1 {
-
-    /* Alineación del texto */
     text-align: center;
-
-    /* Grosor de la fuente negrita */
+    font-family: "Didact Gothic", sans-serif;
     font-weight: bold;
+}
 
+h2 {
+    font-family: "Cairo", sans-serif;
+    font-weight: bold;
+}
+
+#photo {
+
+    /* Ancho del elemento */
+    width: 8vw;
+
+    /* Alto del elemento */
+    height: auto;
+}
+
+.subtitle {
+
+    /* Color del texto en rgba */
+    color: rgb(151 156 165 / 0.89);
+
+    /* Transformación del texto a mayúsculas */
+    text-transform: uppercase;
+}
+
+/* <p> dentro de <footer>: alineación a la derecha y en itálica */
+footer p {
+    text-align: right;
+    font-style: italic;
+}
+
+/* <ul> hija inmediata de <nav>: sin viñetas */
+nav > ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section {
+    border: 0.2pt solid #cedddd;
+    margin: 4px 2px 8px 2px;
+    padding: 1.5% 0.8%;
+    margin-bottom: 1.2rem;
 }
