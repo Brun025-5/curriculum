@@ -2,15 +2,48 @@
     font-family: "Telex", sans-serif;
 }
 
+body {
+    background-color: #0f0e17;
+}
+
+p {
+    color: #a7a9be;
+}
+
 h1 {
     text-align: center;
     font-family: "Didact Gothic", sans-serif;
     font-weight: bold;
+    color: #fffffe;
 }
 
 h2 {
     font-family: "Cairo", sans-serif;
     font-weight: bold;
+    color: #0f0e17
+}
+
+body > nav {
+    background-color: #0f0e17 ;
+    padding-left: 0;
+    padding-right: 0;
+    
+}
+
+.nav-list {
+    padding: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    background-color: #ff8906; /* Fondo igual al body para los márgenes */
+    display: flex;
+    justify-content: center;
+    
+}
+
+.nav-list li a {
+    color: #fffffe;
+    text-decoration: none;
 }
 
 #photo {
@@ -25,7 +58,7 @@ h2 {
 .subtitle {
 
     /* Color del texto en rgba */
-    color: rgb(151 156 165 / 0.89);
+    color: #0f0e17;
 
     /* Transformación del texto a mayúsculas */
     text-transform: uppercase;
@@ -41,6 +74,10 @@ footer p {
 nav > ul {
     list-style: none;
     padding-left: 0;
+    gap: 1.2rem;             /* Espacio entre los elementos */
+    justify-content: center; /* Centra la lista horizontalmente */
+    align-items: center;     /* Centra la lista verticalmente */
+    display: flex;
 }
 
 section {
@@ -48,4 +85,6 @@ section {
     margin: 4px 2px 8px 2px;
     padding: 1.5% 0.8%;
     margin-bottom: 1.2rem;
+    background-color: #fffffe;
+    border-radius: 25px 25px 25px 25px;
 }
