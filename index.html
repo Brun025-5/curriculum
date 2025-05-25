@@ -1,6 +1,4 @@
 <style>
-/*@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Didact+Gothic&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Didact+Gothic&family=Telex&display=swap');
 </style>
 
@@ -13,38 +11,54 @@
     <meta name="description" content="Curriculum Vitae de Bruno Romero, desarrollador con experiencia en tecnología y proyectos innovadores.">
     <meta name="author" content="Bruno Romero">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Curriculum de Bruno Romero</title>
 </head>
 <body>
-    <header>
-        <h1>Curriculum de Bruno Romero</h1>
-        <p>Bienvenido a mi currículum vitae.</p>
-    </header>
-    <div class="curved-header">
-
-    </div>
-    <nav>
-        <ul class="nav-list">
-            <li><a href="#perfil">Perfil</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#educacion">Educación</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#referencias">Referencias</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
     <main>
-        <section id="perfil">
+        <section id="folder">
+            <aside id = "perfil">
+                <img src="./multimedia/Yo.png" id="photo">
+                <h1>Bruno Romero</h1>
+                <p>Computer Science Student</p>
+                <section class="perfil-icons">
+                    <a href="https://www.linkedin.com/in/bruno-romero-yagual" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/Brun025-5" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:brurrome@espol.edu.ec" target="_blank" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </section>
+            </aside>
+            <div id = "info">
+                <nav id = "nav">
+                    <ul class="nav-list">
+                        <li><a id="seleccionado" href="#perfil">Perfil</a></li>
+                        <li><a href="#experiencia">Experiencia</a></li>
+                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#educacion">Educación</a></li>
+                        <li><a href="#habilidades">Habilidades</a></li>
+                        <!--<li><a href="#referencias">Referencias</a></li>
+                        <li><a href="#contacto">Contacto</a></li>-->
+                    </ul>
+                </nav>
+            </div>            
+        </section>
+
+        <!--
+        <section class="folder" id="perfil">
             <h2 class="subtitle">Perfil</h2>
-            <!-- Información de perfil -->
              <img src="./multimedia/LJ.jpg" id="photo">
              <img src="https://placehold.co/600x400" id="photo" alt="Imagen de perfil" >
              <div style="margin-bottom:16px;">
                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="Video de ejemplo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
-        <section id="experiencia">
+        -->
+        <section class="folder" id="experiencia">
             <h2 class="subtitle">Experiencia</h2>
             <!-- Experiencia laboral -->
              <ol>
@@ -53,7 +67,7 @@
             </ol>
         </section>
         
-        <section id="proyectos">
+        <section class="folder" id="proyectos">
             <h2 class="subtitle">Proyectos</h2>
             <!-- Proyectos destacados -->
              <ul>
@@ -63,19 +77,19 @@
             </ul>
         </section>
 
-        <section id="educacion">
+        <section class="folder" id="educacion">
             <h2 class="subtitle">Educación</h2>
             <!-- Estudios realizados -->
              <p>
                 Actualmente estudio en la <a href="https://www.espol.edu.ec/es" target="_blank" rel="noopener">Escuela Superior Politécnica del Litoral (ESPOL)</a>, una de las universidades más prestigiosas de Ecuador, donde me estoy formando en el área de la computación y desarrollo profesional.
             </p>
         </section>
-        <section id="habilidades">
+        <section class="folder" id="habilidades">
             <h2 class="subtitle">Habilidades</h2>
             <!-- Habilidades técnicas y blandas -->
         </section>
 
-        <section id="referencias">
+        <section class="folder" id="referencias">
             <h2 class="subtitle">Referencias</h2>
             <ul>
                 <li>
@@ -112,7 +126,7 @@
         </section>
 
 
-        <section id="contacto">
+        <section class="folder" id="contacto">
             <h2 class="subtitle">Contacto</h2>
             <!-- Información de contacto -->
             <iframe 
