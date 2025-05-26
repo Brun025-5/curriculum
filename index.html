@@ -199,26 +199,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
 
-            <form action="#" method="post" style="margin-bottom:16px;">
+            <form action="#" method="post" >
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required style="display:block;width:100%;max-width:400px;margin-bottom:12px;">
+                <input type="text" id="nombre" name="nombre" required style="display:block;width:100%;max-width:400px;">
 
                 <label for="motivo">Motivo de contacto:</label>
-                <select id="motivo" name="motivo" required style="display:block;width:100%;max-width:400px;margin-bottom:12px;">
+                <select id="motivo" name="motivo" required style="display:block;width:100%;max-width:400px;">
                     <option value="" disabled selected>Seleccione una opción</option>
                     <option value="consulta">Consulta</option>
                     <option value="trabajo">Oferta de trabajo</option>
                     <option value="otro">Otro</option>
                 </select>
 
-                <fieldset style="margin-bottom:12px;">
-                    <legend>¿Cómo prefiere ser contactado?</legend>
+                <label for="contactos">¿Cómo prefiere ser contactado?</label>
+                <fieldset>
                     <label><input type="radio" name="contacto" value="email" required> Email</label>
                     <label><input type="radio" name="contacto" value="telefono" required> Teléfono</label>
                 </fieldset>
 
                 <label for="intereses">Áreas de interés:</label>
-                <select id="intereses" name="intereses[]" multiple required style="display:block;width:100%;max-width:400px;height:80px;margin-bottom:12px;">
+                <select id="intereses" name="intereses[]" multiple required>
                     <option value="desarrollo">Desarrollo</option>
                     <option value="diseño">Diseño</option>
                     <option value="investigacion">Investigación</option>
@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </select>
 
                 <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required style="display:block;width:100%;max-width:400px;height:80px;margin-bottom:12px;"></textarea>
+                <textarea id="mensaje" name="mensaje" required style="display:block;width:100%;max-width:400px;height:80px"></textarea>
 
                 <button type="submit">Enviar</button>
             </form>
