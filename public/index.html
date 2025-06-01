@@ -148,90 +148,44 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>            
         </section>
 
-        <!--
-        <section class="folder" id="perfil">
-            <h2 class="subtitle">Perfil</h2>
-             <img src="./multimedia/LJ.jpg" id="photo">
-             <img src="https://placehold.co/600x400" id="photo" alt="Imagen de perfil" >
-             <div style="margin-bottom:16px;">
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="Video de ejemplo de YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </section>
-        
-        <section class="folder" id="experiencia">
-            <h2 class="subtitle">Experiencia</h2>
-            
-             
-        </section>
-        
-        <section class="folder" id="proyectos">
-            <h2 class="subtitle">Proyectos</h2>
-            
-             
-        </section>
-
-        <section class="folder" id="educacion">
-            <h2 class="subtitle">Educación</h2>
-            
-             
-        </section>
-        <section class="folder" id="habilidades">
-            <h2 class="subtitle">Habilidades</h2>
-            
-        </section>
-
-        <section class="folder" id="referencias">
-            <h2 class="subtitle">Referencias</h2>
-            
-        </section>
-        -->
-
         <section id="contacto">
-            <h2>Contacto</h2>
-            <!-- Información de contacto -->
-             <div id="map-container">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.1866698049837!2d-79.9672671304687!3d-2.1479343999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d2b2e6c2e4d%3A0x8e2a7e6e8e2e8e2a!2sEscuela%20Superior%20Politécnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1716138000000!5m2!1ses!2sec" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-             </div>
+            <section id="contacto-header">
+                <h2>Contacto</h2>
+                <p>Si deseas contactarme, puedes hacerlo a través de los siguientes medios:</p>
+            </section>
+            
+            <section id="contacto-content">
+                <section id="map-container">
+                    <h2>En persona</h2>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.1866698049837!2d-79.9672671304687!3d-2.1479343999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d2b2e6c2e4d%3A0x8e2a7e6e8e2e8e2a!2sEscuela%20Superior%20Politécnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1716138000000!5m2!1ses!2sec" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </section>
+                <section id="form-container">
+                    <h2>Virtual</h2>
+                    <form action="#" method="post" >
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required style="display:block;width:100%;max-width:400px;">
 
-            <form action="#" method="post" >
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required style="display:block;width:100%;max-width:400px;">
+                        <label for="motivo">Motivo de contacto:</label>
+                        <select id="motivo" name="motivo" required style="display:block;width:100%;max-width:400px;">
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="consulta">Consulta</option>
+                            <option value="trabajo">Oferta de trabajo</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" required style="display:block;width:100%;max-width:400px;height:80px"></textarea>
 
-                <label for="motivo">Motivo de contacto:</label>
-                <select id="motivo" name="motivo" required style="display:block;width:100%;max-width:400px;">
-                    <option value="" disabled selected>Seleccione una opción</option>
-                    <option value="consulta">Consulta</option>
-                    <option value="trabajo">Oferta de trabajo</option>
-                    <option value="otro">Otro</option>
-                </select>
-                <!--
-                <label for="contactos">¿Cómo prefiere ser contactado?</label>
-                <fieldset>
-                    <label><input type="radio" name="contacto" value="email" required> Email</label>
-                    <label><input type="radio" name="contacto" value="telefono" required> Teléfono</label>
-                </fieldset>
-
-                <label for="intereses">Áreas de interés:</label>
-                <select id="intereses" name="intereses[]" multiple required>
-                    <option value="desarrollo">Desarrollo</option>
-                    <option value="diseño">Diseño</option>
-                    <option value="investigacion">Investigación</option>
-                    <option value="docencia">Docencia</option>
-                </select>
-                -->
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" required style="display:block;width:100%;max-width:400px;height:80px"></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </section>
+            </section>
+        
         </section>
     </main>
     <footer>
