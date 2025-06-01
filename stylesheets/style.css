@@ -28,7 +28,9 @@ h2 {
     font-family: "Cairo", sans-serif;
     font-weight: bold;
     font-size: 2.5vw;
-    color: #0f0e17
+    color: #0f0e17;
+    text-transform: uppercase;
+
 }
 
 nav > ul {
@@ -104,11 +106,9 @@ nav > ul {
   flex: 2 1 70%;
   flex-direction: column;
   display: flex;
-  align-items: stretch;
-  justify-content: flex-start;
-  position: static;
+  overflow-y: auto;
   height: 100%;
-  min-height: 0; /* Importante para que los hijos flexibles funcionen bien */
+  border-radius: 0 25px 25px 0; /* Importante para que los hijos flexibles funcionen bien */
 }
 
 #nav {
@@ -148,15 +148,6 @@ nav > ul {
   cursor: default;
 }
 
-/*
-.info-content {
-    display: none;
-}
-.info-content.active {
-    display: block;
-}
-*/
-
 .info-content {
     opacity: 0;
     pointer-events: none;
@@ -172,7 +163,6 @@ nav > ul {
     opacity: 1;
     pointer-events: auto;
     height: auto;
-    transition: opacity 0.4s;
     overflow-y: visible;
     flex: 1 1 auto;
     min-height: 0;
@@ -195,6 +185,19 @@ nav > ul {
     background: #ca503f;
 }
 
+#map-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#map-container:hover {
+  box-shadow: 0 8px 24px rgba(255, 139, 6, 0.63);
+}
+
 #contacto {
     display: flex;
     flex-direction: column;
@@ -209,10 +212,12 @@ nav > ul {
 }
 
 #contacto form {
-    margin: 0;
-    display:flex;
+    display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 10px;
+    width: 50%;
+    margin: 20px;
 }
 
 #contacto input,
@@ -247,21 +252,10 @@ nav > ul {
     cursor: pointer;
 }
 
-#contacto fieldset input[type="radio"] {
-    accent-color: #ff8906;
-    margin-right: 6px;
-}
-
-#contacto select#intereses {
-    background-color: #0f0e17;
-    color: #fffffe;
-    border: 1px solid #a7a9be;
-    width: 100%;
-    max-width: 400px;
-    height: 80px;
-    border-radius: 4px;
-    padding: 8px;
-    box-sizing: border-box;
+#contacto select option:hover,
+#contacto select option:checked {
+  background-color: #ff8906;
+  color: #fffffe;
 }
 
 #contacto button[type="submit"] {
@@ -275,6 +269,7 @@ nav > ul {
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
     box-shadow: 0 2px 8px rgba(229,49,112,0.10);
+    width: 50%;
 }
 
 #contacto button[type="submit"]:hover {
@@ -283,8 +278,7 @@ nav > ul {
 }
 
 .subtitle {
-    color: #0f0e17;
-    text-transform: uppercase;
+    margin: 10px;
 }
 
 footer p {
