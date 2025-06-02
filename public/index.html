@@ -34,7 +34,7 @@
                     </a>
                 </section>
             </aside>
-            <div id = "info">
+            <section id = "info">
                 <nav id = "nav">
                     <ul class="nav-list">
                         <li><a id="seleccionado" href="#perfil">Perfil</a></li>
@@ -47,7 +47,7 @@
                     </ul>
                 </nav>
 
-                <div class="info-content" id="perfil-content">
+                <section class="info-content" id="perfil-content">
                     <!-- Contenido de perfil aquí -->
                     <h2 class="subtitle">Acerca de mí</h2>
                     <!-- ... -->
@@ -64,93 +64,110 @@
                         <li>Español: nativo</li>
                         <li>Inglés: B2 (intermedio)</li>
                     </ul>
-                </div>
-                <div class="info-content" id="experiencia-content">
-                    <!-- Contenido de experiencia aquí -->
-                    <h2 class="subtitle">Experiencia</h2>
-                    <!-- ... -->
-                    <ol>
-                        <li>Ayudante de Docencia - PAO 2024 II: POO</li>
-                        <li>Ayudante de Docencia - PAO 2025 I: POO</li>
-                    </ol>
-                </div>
-                <div class="info-content" id="proyectos-content">
+                </section>
+                <section class="info-content" id="experiencia-content">
+                    <div class="experience-timeline">
+                        <div class="experience-item">
+                            <div class="exp-details">
+                            <h3>Ayudante de Programación Orientada a Objetos</h3>
+                            <p class="exp-place">FIEC - ESPOL</p>
+                            <p class="exp-date">2024 - 2025</p>
+                            <p class="exp-description">
+                                Apoyo en clases, tutorías, revisión de tareas y proyectos. Asistencia a estudiantes en resolución de problemas y desarrollo en Java.
+                            </p>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="exp-details">
+                            <h3>Ayudante de Programación Orientada a Objetos</h3>
+                            <p class="exp-place">FIEC - ESPOL</p>
+                            <p class="exp-date">2025 - Presente</p>
+                            <p class="exp-description">
+                                Apoyo en clases, tutorías, revisión de tareas y proyectos. Asistencia a estudiantes en resolución de problemas y desarrollo en Java.
+                            </p>
+                            </div>
+                        </div>
+                        </div>
+
+                </section>
+                <section class="info-content" id="proyectos-content">
                     <!-- Contenido de proyectos aquí -->
                     <!-- ... -->
                     <div class="projects-container">
-                    <!-- Proyecto 1 -->
-                    <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">
-                        <a href="https://github.com/Brun025-5/ProyectoOCP1" target="_blank">
-                            Menú en Assembler
-                            <i class="fas fa-external-link-alt external-link-icon"></i>
-                        </a>
-                        </h3>
-                        <p class="project-tech"><strong>Tecnologías:</strong> Assembler, C</p>
-                    </div>
-                    <p class="project-description">
-                        Menú de miniaplicaciones en Assembler: bajo nivel y gestión eficiente.	
-                    </p>
-                    <ul class="project-features">
-                        <li>Calculadora 16 bits (suma, resta, multiplicación, división).</li>
-                        <li>Conversión decimal ↔ hexadecimal.</li>
-                        <li>Generador de números aleatorios (algoritmo LCG).</li>
-                    </ul>
-                    </div>
+                        <!-- Proyecto 1 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">
+                                <a href="https://github.com/Brun025-5/ProyectoOCP1" target="_blank">
+                                    Menú en Assembler
+                                    <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
+                                </h3>
+                                <p class="project-tech"><strong>Tecnologías:</strong> Assembler, C</p>
+                            </div>
+                            <p class="project-description">
+                                Menú de miniaplicaciones en Assembler: bajo nivel y gestión eficiente.	
+                            </p>
+                            <ul class="project-features">
+                                <li>Calculadora 16 bits (suma, resta, multiplicación, división).</li>
+                                <li>Conversión decimal ↔ hexadecimal.</li>
+                                <li>Generador de números aleatorios (algoritmo LCG).</li>
+                            </ul>
+                        </div>
 
-                    <!-- Proyecto 2 -->
-                    <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">
-                        <a href="https://github.com/davexat/20preguntas" target="_blank">
-                            20preguntas
-                            <i class="fas fa-external-link-alt external-link-icon"></i>
-                        </a>
-                        </h3>
-                        <p class="project-tech"><strong>Tecnologías:</strong> Java, CSS, JUnit</p>
-                    </div>
-                    <p class="project-description">
-                        Juego de adivinanzas: uso e interacción con árboles.	
-                    </p>
-                    <ul class="project-features">
-                        <li>Implementa un árbol binario donde cada nodo contiene una pregunta y punteros a “sí”/“no”.</li>
-                        <li>Recorrido recursivo basado en la respuesta del usuario (S/N) hasta llegar a una hoja (objeto adivinable).</li>
-                        <li>Persistencia: serializa el árbol en disco para cargarse en ejecuciones posteriores.</li>
-                    </ul>
-                    </div>
+                        <!-- Proyecto 2 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">
+                                <a href="https://github.com/davexat/20preguntas" target="_blank">
+                                    20preguntas
+                                    <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
+                                </h3>
+                                <p class="project-tech"><strong>Tecnologías:</strong> Java, CSS, JUnit</p>
+                            </div>
+                            <p class="project-description">
+                                Juego de adivinanzas: uso e interacción con árboles.	
+                            </p>
+                            <ul class="project-features">
+                                <li>Implementa un árbol binario donde cada nodo contiene una pregunta y punteros a “sí”/“no”.</li>
+                                <li>Recorrido recursivo basado en la respuesta del usuario (S/N) hasta llegar a una hoja (objeto adivinable).</li>
+                                <li>Persistencia: serializa el árbol en disco para cargarse en ejecuciones posteriores.</li>
+                            </ul>
+                        </div>
 
-                    <!-- Proyecto 3 -->
-                    <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">
-                        <a href="https://github.com/davexat/ED_IziCarsEC" target="_blank">
-                            EZCars
-                            <i class="fas fa-external-link-alt external-link-icon"></i>
-                        </a>
-                        </h3>
-                        <p class="project-tech"><strong>Tecnologías:</strong> Java, JavaFX</p>
+                        <!-- Proyecto 3 -->
+                        <div class="project-card">
+                            <div class="project-header">
+                                <h3 class="project-title">
+                                <a href="https://github.com/davexat/ED_IziCarsEC" target="_blank">
+                                    EZCars
+                                    <i class="fas fa-external-link-alt external-link-icon"></i>
+                                </a>
+                                </h3>
+                                <p class="project-tech"><strong>Tecnologías:</strong> Java, JavaFX</p>
+                            </div>
+                            <p class="project-description">
+                                App de tienda de vehículos: experiencia vendedor y comprador.	
+                            </p>
+                            <ul class="project-features">
+                                <li>Interfaz gráfica en JavaFX con ventanas de Login/Registro, Dashboard y Detalles del vehículo.</li>
+                                <li>CRUD completo de vehículos: alta, baja, edición y listado con imágenes.</li>
+                                <li>Roles y permisos: comprador (solo ver/filtar catálogo) y vendedor (gestionar inventario).</li>
+                            </ul>
+                        </div>
                     </div>
-                    <p class="project-description">
-                        App de tienda de vehículos: experiencia vendedor y comprador.	
-                    </p>
-                    <ul class="project-features">
-                        <li>Interfaz gráfica en JavaFX con ventanas de Login/Registro, Dashboard y Detalles del vehículo.</li>
-                        <li>CRUD completo de vehículos: alta, baja, edición y listado con imágenes.</li>
-                        <li>Roles y permisos: comprador (solo ver/filtar catálogo) y vendedor (gestionar inventario).</li>
-                    </ul>
-                    </div>
-                </div>
-                </div>
-                <div class="info-content" id="educacion-content">
+                </section>
+                <section class="info-content" id="educacion-content">
                     <!-- Contenido de proyectos aquí -->
                     <h2 class="subtitle">Educación</h2>
                     <!-- ... -->
                     <p>
                         Actualmente estudio en la <a href="https://www.espol.edu.ec/es" target="_blank" rel="noopener">Escuela Superior Politécnica del Litoral (ESPOL)</a>, una de las universidades más prestigiosas de Ecuador, donde me estoy formando en el área de la computación y desarrollo profesional.
                     </p>
-                </div>
-                <div class="info-content" id="referencias-content">
+                </section>
+                <section class="info-content" id="referencias-content">
                     <!-- Contenido de referencias aquí -->
                     <div class="carousel-container">
                         <button class="carousel-btn prev">&lt;</button>
@@ -175,8 +192,8 @@
 
                         <button class="carousel-btn next">&gt;</button>
                         </div>
-                </div>
-            </div>            
+                </section>
+            </section>            
         </section>
 
         <section id="contacto">
