@@ -93,9 +93,9 @@
                         Menú de miniaplicaciones en Assembler: bajo nivel y gestión eficiente.	
                     </p>
                     <ul class="project-features">
-                        <li>Gestión de tareas con atributos: título, descripción, fecha de entrega y prioridad.</li>
-                        <li>Filtrado y ordenamiento de tareas por fecha y estado (completado / pendiente).</li>
-                        <li>Exportación de lista de tareas a PDF y respaldo automático local.</li>
+                        <li>Calculadora 16 bits (suma, resta, multiplicación, división).</li>
+                        <li>Conversión decimal ↔ hexadecimal.</li>
+                        <li>Generador de números aleatorios (algoritmo LCG).</li>
                     </ul>
                     </div>
 
@@ -114,9 +114,9 @@
                         Juego de adivinanzas: uso e interacción con árboles.	
                     </p>
                     <ul class="project-features">
-                        <li>Autenticación con JSON Web Tokens (JWT) y protección de rutas seguras.</li>
-                        <li>Panel de administración para gestionar productos, categorías y ver órdenes.</li>
-                        <li>Integración de Stripe (modo test) para flujo de checkout simulado.</li>
+                        <li>Implementa un árbol binario donde cada nodo contiene una pregunta y punteros a “sí”/“no”.</li>
+                        <li>Recorrido recursivo basado en la respuesta del usuario (S/N) hasta llegar a una hoja (objeto adivinable).</li>
+                        <li>Persistencia: serializa el árbol en disco para cargarse en ejecuciones posteriores.</li>
                     </ul>
                     </div>
 
@@ -135,9 +135,9 @@
                         App de tienda de vehículos: experiencia vendedor y comprador.	
                     </p>
                     <ul class="project-features">
-                        <li>Maquetación en HTML5 y CSS3 responsiva, con fondo oscuro y cards blancas.</li>
-                        <li>Navegación por pestañas controlada con JavaScript puro y transiciones suaves.</li>
-                        <li>Carrusel automático de testimonios con botones prev/next y autoplay.</li>
+                        <li>Interfaz gráfica en JavaFX con ventanas de Login/Registro, Dashboard y Detalles del vehículo.</li>
+                        <li>CRUD completo de vehículos: alta, baja, edición y listado con imágenes.</li>
+                        <li>Roles y permisos: comprador (solo ver/filtar catálogo) y vendedor (gestionar inventario).</li>
                     </ul>
                     </div>
                 </div>
@@ -152,8 +152,6 @@
                 </div>
                 <div class="info-content" id="referencias-content">
                     <!-- Contenido de referencias aquí -->
-                    <h2 class="subtitle">Referencias</h2>
-                    <!-- ... -->
                     <div class="carousel-container">
                         <button class="carousel-btn prev">&lt;</button>
 
@@ -191,7 +189,7 @@
                 <section id="map-container">
                     <h2>En persona</h2>
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.1866698049837!2d-79.9672671304687!3d-2.1479343999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6d2b2e6c2e4d%3A0x8e2a7e6e8e2e8e2a!2sEscuela%20Superior%20Politécnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses!2sec!4v1716138000000!5m2!1ses!2sec" 
+                        src="https://maps.google.com/maps?q=Edificio%2011A%20FIEC%20ESPOL&amp;z=17&amp;output=embed" 
                         allowfullscreen="" 
                         loading="lazy" 
                         referrerpolicy="no-referrer-when-downgrade">
@@ -201,10 +199,13 @@
                     <h2>Virtual</h2>
                     <form action="#" method="post" >
                         <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required style="display:block;width:100%;max-width:400px;">
+                        <input type="text" id="nombre" name="nombre" required>
+
+                        <label for="correo">Email:</label>
+                        <input type="text" id="correo" name="correo" required>
 
                         <label for="motivo">Motivo de contacto:</label>
-                        <select id="motivo" name="motivo" required style="display:block;width:100%;max-width:400px;">
+                        <select id="motivo" name="motivo" required>
                             <option value="" disabled selected>Seleccione una opción</option>
                             <option value="consulta">Consulta</option>
                             <option value="trabajo">Oferta de trabajo</option>
@@ -212,7 +213,7 @@
                         </select>
                         
                         <label for="mensaje">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" required style="display:block;width:100%;max-width:400px;height:80px"></textarea>
+                        <textarea id="mensaje" name="mensaje" required></textarea>
 
                         <button type="submit">Enviar</button>
                     </form>

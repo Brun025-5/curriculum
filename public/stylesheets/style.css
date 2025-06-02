@@ -17,9 +17,8 @@ main {
     width: 100%;
 }
 
-p {
-    color: #a7a9be;
-    font-size: 1.1vw;
+p, li {
+    font-family: "Telex", sans-serif;
 }
 
 h1 {
@@ -66,7 +65,7 @@ nav > ul {
   filter: drop-shadow(0 0 0.75rem #d2d4ec);
 }
 
-#folder p {
+#folder p, li {
     font-size: 1.1em;
     color: #5c5f70;
 }
@@ -203,6 +202,50 @@ nav > ul {
     background: #ff8906;
 }
 
+/* Títulos destacados */
+#perfil-content h2 {
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+#perfil-content h2::after {
+  content: '';
+  display: block;
+  width: 10%;
+  height: 4px;
+  background: #ff8906;
+  margin-left: 0;
+  border-radius: 2px;
+}
+
+/* Texto más cómodo */
+#perfil-content p {
+  line-height: 1.3;
+  font-size: 1.1rem;
+  width: 95%;
+}
+
+/* Si hay listas */
+#perfil-content ul {
+  padding-left: 1.5rem;
+}
+
+#perfil-conten li {
+  line-height: 1.3;
+  font-size: 1.1rem;
+}
+
+#perfil-content li::marker {
+  color: #ffa500;
+}
+
+
+
+#referencias-content {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .carousel-container {
   position: relative;
@@ -210,8 +253,6 @@ nav > ul {
   max-width: 100%;
   padding: 2em 1em;
   background: #fffffe;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   display: flex;
   align-items: center;
 }
@@ -373,6 +414,8 @@ nav > ul {
   margin: 0.5em 0 0;
 }
 
+
+
 #contacto {
     padding: 2em 0;
     display: flex;
@@ -381,14 +424,6 @@ nav > ul {
     color: #0f0e17;
     background-color: #fffffe;
     width: 100%;
-}
-
-#contacto, #contacto h2 {
-    font-family: 'Cairo', Arial, Helvetica, sans-serif;
-}
-
-#contacto, #contacto p {
-    font-family: 'Telex', Arial, Helvetica, sans-serif;
 }
 
 #contacto-header {
@@ -409,7 +444,7 @@ nav > ul {
   width: 60px;
   height: 4px;
   background: #ff8906;
-  margin: 0.5em auto 0;
+  margin: 0.1em auto 0;
   border-radius: 2px;
 }
 
@@ -464,12 +499,17 @@ nav > ul {
 }
 
 #contacto form {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1em 1em;
+    width: 100%;
+    margin: 10px;
+    /*display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: 10px;
     width: 50%;
-    margin: 10px;
+    margin: 10px;*/
 }
 
 #contacto input,
@@ -481,6 +521,10 @@ nav > ul {
     padding: 8px;
     border-radius: 4px;
     
+}
+
+#contacto textarea {
+    height: 100px;
 }
 
 #contacto input::placeholder,
@@ -519,9 +563,10 @@ nav > ul {
   border-radius: 8px;
   border: none;
   transition: background 0.3s ease;
-  margin-top: 1em;
-  width: auto;
+  width: 75%;
   cursor: pointer;
+  grid-column: 2 / 3;
+  justify-self: end;
 }
 
 #contacto button[type="submit"]:hover {
