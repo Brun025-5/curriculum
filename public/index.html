@@ -15,41 +15,13 @@
     <title>Curriculum de Bruno Romero</title>
 </head>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const navLinks = document.querySelectorAll('.nav-list a');
-    const sections = document.querySelectorAll('.info-content');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            // Quitar el id "seleccionado" de todos los enlaces
-            navLinks.forEach(l => l.removeAttribute('id'));
-            // Asignar el id "seleccionado" al enlace clickeado
-            this.id = "seleccionado";
-
-            // Mostrar solo la sección correspondiente
-            const targetId = this.getAttribute('href').replace('#', '') + '-content';
-            sections.forEach(sec => sec.classList.remove('active'));
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-                e.preventDefault();
-                targetSection.classList.add('active');
-            }
-        });
-    });
-
-    // Mostrar la primera sección por defecto
-    if (sections.length) sections[0].classList.add('active');
-});
-</script>
-
 <body>
     <main>
         <section id="folder">
             <aside id = "perfil">
-                <img src="./multimedia/Yo.png" id="photo">
+                <img src="./multimedia/Me.png" id="photo">
                 <h1>Bruno Romero</h1>
-                <p>Computer Science Student</p>
+                <p>Estudiante de Ciencias de la Computación</p>
                 <section class="perfil-icons">
                     <a href="https://www.linkedin.com/in/bruno-romero-yagual" target="_blank" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
@@ -80,6 +52,18 @@ document.addEventListener("DOMContentLoaded", function() {
                     <h2 class="subtitle">Acerca de mí</h2>
                     <!-- ... -->
                      <p>Soy una persona apasionada por las tecnologías nuevas y tradicionales, y el aprendizaje continuo. Trato siempre de reafianzar mis conocimientos aplicándolos en proyectos académicos y personales. Estoy especializándome en el desarrollo de software y la ciberseguridad, sin embargo, no tengo problema en aprender y trabajar en campos relacionados.</p>
+
+                    <h2 class="subtitle">Objetivo Profesional</h2>
+                    <p>
+                        Mi objetivo es integrarme a un equipo de ingeniería de software donde pueda aplicar mis conocimientos 
+                        en Java y DevOps, colaborar en proyectos de alto impacto y profundizar en prácticas de ciberseguridad.
+                    </p>
+
+                    <h2 class="subtitle">Idiomas</h2>
+                    <ul class="skills-list">
+                        <li>Español: nativo</li>
+                        <li>Inglés: B2 (intermedio)</li>
+                    </ul>
                 </div>
                 <div class="info-content" id="experiencia-content">
                     <!-- Contenido de experiencia aquí -->
@@ -92,13 +76,71 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
                 <div class="info-content" id="proyectos-content">
                     <!-- Contenido de proyectos aquí -->
-                    <h2 class="subtitle">Proyectos</h2>
                     <!-- ... -->
-                    <ul>
-                        <li>Elemento A</li>
-                        <li>Elemento B</li>
-                        <li>Elemento C</li>
+                    <div class="projects-container">
+                    <!-- Proyecto 1 -->
+                    <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                        <a href="https://github.com/Brun025-5/ProyectoOCP1" target="_blank">
+                            Menú en Assembler
+                            <i class="fas fa-external-link-alt external-link-icon"></i>
+                        </a>
+                        </h3>
+                        <p class="project-tech"><strong>Tecnologías:</strong> Assembler, C</p>
+                    </div>
+                    <p class="project-description">
+                        Menú de miniaplicaciones en Assembler: bajo nivel y gestión eficiente.	
+                    </p>
+                    <ul class="project-features">
+                        <li>Gestión de tareas con atributos: título, descripción, fecha de entrega y prioridad.</li>
+                        <li>Filtrado y ordenamiento de tareas por fecha y estado (completado / pendiente).</li>
+                        <li>Exportación de lista de tareas a PDF y respaldo automático local.</li>
                     </ul>
+                    </div>
+
+                    <!-- Proyecto 2 -->
+                    <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                        <a href="https://github.com/davexat/20preguntas" target="_blank">
+                            20preguntas
+                            <i class="fas fa-external-link-alt external-link-icon"></i>
+                        </a>
+                        </h3>
+                        <p class="project-tech"><strong>Tecnologías:</strong> Java, CSS, JUnit</p>
+                    </div>
+                    <p class="project-description">
+                        Juego de adivinanzas: uso e interacción con árboles.	
+                    </p>
+                    <ul class="project-features">
+                        <li>Autenticación con JSON Web Tokens (JWT) y protección de rutas seguras.</li>
+                        <li>Panel de administración para gestionar productos, categorías y ver órdenes.</li>
+                        <li>Integración de Stripe (modo test) para flujo de checkout simulado.</li>
+                    </ul>
+                    </div>
+
+                    <!-- Proyecto 3 -->
+                    <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">
+                        <a href="https://github.com/davexat/ED_IziCarsEC" target="_blank">
+                            EZCars
+                            <i class="fas fa-external-link-alt external-link-icon"></i>
+                        </a>
+                        </h3>
+                        <p class="project-tech"><strong>Tecnologías:</strong> Java, JavaFX</p>
+                    </div>
+                    <p class="project-description">
+                        App de tienda de vehículos: experiencia vendedor y comprador.	
+                    </p>
+                    <ul class="project-features">
+                        <li>Maquetación en HTML5 y CSS3 responsiva, con fondo oscuro y cards blancas.</li>
+                        <li>Navegación por pestañas controlada con JavaScript puro y transiciones suaves.</li>
+                        <li>Carrusel automático de testimonios con botones prev/next y autoplay.</li>
+                    </ul>
+                    </div>
+                </div>
                 </div>
                 <div class="info-content" id="educacion-content">
                     <!-- Contenido de proyectos aquí -->
@@ -112,38 +154,29 @@ document.addEventListener("DOMContentLoaded", function() {
                     <!-- Contenido de referencias aquí -->
                     <h2 class="subtitle">Referencias</h2>
                     <!-- ... -->
-                    <ul>
-                        <li>
-                            <blockquote>
-                                "Bruno demostró gran responsabilidad y compromiso en todos los proyectos en los que colaboró conmigo."
-                            </blockquote>
-                            <p>
-                                <span>María Pérez</span><br>
-                                Gerente de Proyectos en TechSolutions<br>
-                                María fue mi supervisora directa durante dos años, donde trabajamos juntos en el desarrollo de aplicaciones web para clientes internacionales.
-                            </p>
-                        </li>
-                        <li>
-                            <blockquote>
-                                "Su capacidad para resolver problemas y trabajar en equipo es destacable."
-                            </blockquote>
-                            <p>
-                                <span>Carlos Gómez</span><br>
-                                Líder Técnico en Innovatech<br>
-                                Carlos lideró el equipo donde participé como desarrollador backend, colaborando en soluciones innovadoras para el sector educativo.
-                            </p>
-                        </li>
-                        <li>
-                            <blockquote>
-                                "Siempre mostró iniciativa y una actitud positiva ante los retos."
-                            </blockquote>
-                            <p>
-                                <span>Lucía Fernández</span><br>
-                                Coordinadora Académica en ESPOL<br>
-                                Lucía fue mi coordinadora en proyectos académicos, donde apoyé en la organización y ejecución de eventos tecnológicos.
-                            </p>
-                        </li>
-                    </ul>
+                    <div class="carousel-container">
+                        <button class="carousel-btn prev">&lt;</button>
+
+                        <div class="carousel-track">
+                            <div class="carousel-item">
+                            <img src="./multimedia/maria.jpg" alt="María Pérez">
+                            <blockquote>“Bruno demostró gran responsabilidad y compromiso en todos los proyectos en los que colaboró conmigo.”</blockquote>
+                            <p><strong>María Pérez</strong><br>Gerente de Proyectos en TechSolutions</p>
+                            </div>
+                            <div class="carousel-item">
+                            <img src="./multimedia/carlos.jpg" alt="Carlos Gómez">
+                            <blockquote>“Su capacidad para resolver problemas y trabajar en equipo es destacable.”</blockquote>
+                            <p><strong>Carlos Gómez</strong><br>Líder Técnico en Innovatech</p>
+                            </div>
+                            <div class="carousel-item">
+                            <img src="./multimedia/lucia.jpg" alt="Lucía Fernández">
+                            <blockquote>“Siempre mostró iniciativa y una actitud positiva ante los retos.”</blockquote>
+                            <p><strong>Lucía Fernández</strong><br>Coordinadora Académica en ESPOL</p>
+                            </div>
+                        </div>
+
+                        <button class="carousel-btn next">&gt;</button>
+                        </div>
                 </div>
             </div>            
         </section>
@@ -188,6 +221,7 @@ document.addEventListener("DOMContentLoaded", function() {
         
         </section>
     </main>
+    <script src="./scripts/main.js"></script>
     <footer>
         <p>&copy; 2025 Bruno Romero</p>
     </footer>

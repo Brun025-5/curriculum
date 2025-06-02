@@ -66,12 +66,19 @@ nav > ul {
   filter: drop-shadow(0 0 0.75rem #d2d4ec);
 }
 
+#folder p {
+    font-size: 1.1em;
+    color: #5c5f70;
+}
+
 #perfil {
   flex: 1 1 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 10px;
+  text-align: center;
 }
 
 .perfil-icons {
@@ -110,12 +117,16 @@ nav > ul {
 
 #info {
   flex: 2 1 70%;
+  position: relative;
   flex-direction: column;
   display: flex;
   overflow-y: auto;
   height: 100%;
-  border-radius: 0 25px 25px 0; /* Importante para que los hijos flexibles funcionen bien */
+  border-radius: 0 25px 25px 0;
+  
 }
+
+
 
 #nav {
     width: 100%;
@@ -160,9 +171,10 @@ nav > ul {
     transition: opacity 0.4s;
     height: 0;
     overflow: hidden;
-    min-height: 0;  /* Permite que el scroll funcione correctamente */
+    min-height: 0; 
     max-height: 100%;
-    padding-right: 8px; /* Espacio para la barra */
+    padding-right: 8px;
+    text-align: justify;
 }
 
 .info-content.active {
@@ -174,7 +186,6 @@ nav > ul {
     min-height: 0;
     max-height: 100%;
     transition: opacity 0.4s;
-    
 }
 
 /* Scrollbar redondeada y discreta */
@@ -182,13 +193,184 @@ nav > ul {
     width: 8px;
     border-radius: 8px;
     background: transparent;
+    transition: background 0.3s;
 }
 .info-content.active::-webkit-scrollbar-thumb {
-    background: #f25f4c;
+    background: #ff8b06b4;
     border-radius: 8px;
 }
 .info-content.active::-webkit-scrollbar-thumb:hover {
-    background: #ca503f;
+    background: #ff8906;
+}
+
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  padding: 2em 1em;
+  background: #fffffe;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff8906;
+  margin-bottom: 1em;
+}
+
+.carousel-item blockquote {
+  font-style: italic;
+  color: #0f0e17;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+  max-width: 600px;
+}
+
+.carousel-item p {
+  color: #5c5f70;
+  font-size: 1rem;
+  max-width: 500px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff8906;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 1em;
+}
+
+.carousel-btn.next {
+  right: 1em;
+}
+
+.carousel-btn:hover {
+  background: #e5780a;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin: 1em 1em;
+  padding-bottom: 1.5em;
+}
+
+/* Card individual de cada proyecto */
+.project-card {
+  background: #fffffe;              /* Fondo blanco */
+  border-radius: 16px;              /* Esquinas redondeadas */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); /* Sombra suave */
+  padding: 1.5em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto hover sobre cada card */
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 139, 6, 0.466);
+}
+
+/* Cabecera del proyecto: título + tecnologías */
+.project-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+  margin-bottom: 0.8em;
+}
+
+/* Título del proyecto */
+.project-title {
+  font-family: "Cairo", sans-serif;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #0f0e17;
+  margin: 0;
+}
+
+/* Enlace en el título */
+.project-title a {
+  text-decoration: none;
+  color: #0f0e17;
+  transition: color 0.2s;
+}
+
+/* Hover en el enlace del título */
+.project-title a:hover {
+  color: #ff8906;
+}
+
+/* Icono de enlace externo */
+.external-link-icon {
+  font-size: 0.9em;
+  margin-left: 0.3em;
+  color: #a7a9be;
+  transition: color 0.2s;
+}
+
+/* Hover en el icono cuando el enlace está hovered */
+.project-title a:hover .external-link-icon {
+  color: #ff8906;
+}
+
+/* Tecnologías usadas (subtítulo pequeño) */
+.project-tech {
+  font-family: "Telex", sans-serif;
+  font-size: 1.2vw;
+  color: #5c5f70;
+  margin: 0;
+}
+
+/* Descripción breve */
+.project-description {
+  font-family: "Telex", sans-serif;
+  font-size: 1.1vw;
+  color: #5c5f70;
+  line-height: 1.5;
+  margin: 0.8em 0;
+}
+
+/* Lista de características */
+.project-features {
+  list-style: disc inside;
+  font-family: "Telex", sans-serif;
+  font-size: 1.1vw;
+  color: #5c5f70;
+  padding-left: 1.2em;
+  margin: 0.5em 0 0;
 }
 
 #contacto {
@@ -201,8 +383,12 @@ nav > ul {
     width: 100%;
 }
 
-#contacto, #contacto * {
+#contacto, #contacto h2 {
     font-family: 'Cairo', Arial, Helvetica, sans-serif;
+}
+
+#contacto, #contacto p {
+    font-family: 'Telex', Arial, Helvetica, sans-serif;
 }
 
 #contacto-header {
@@ -210,22 +396,11 @@ nav > ul {
   margin-bottom: 2em;
 }
 
-
 #contacto-header h2 {
   font-size: 2.5em;
   color: #0f0e17;
   margin-bottom: 0.5em;
   position: relative;
-}
-
-#contacto-content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  max-width: 1200px;
 }
 
 #contacto-header h2::after {
@@ -241,6 +416,16 @@ nav > ul {
 #contacto-header p {
   font-size: 1.1em;
   color: #5c5f70;
+}
+
+#contacto-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1200px;
 }
 
 #map-container h2,
@@ -326,7 +511,7 @@ nav > ul {
 }
 
 #contacto button[type="submit"] {
-    background: #ff8906;
+  background: #ff8906;
   color: white;
   font-size: 1.1em;
   font-weight: bold;
@@ -357,5 +542,30 @@ footer p {
     flex-direction: column;
     gap: 1.5em;
     padding: 0 1em;
+  }
+}
+@media (max-width: 1024px) {
+  .project-title {
+    font-size: 2.5vw;
+  }
+  .project-tech,
+  .project-description,
+  .project-features {
+    font-size: 1.4vw;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mostrar cards apiladas con espacio reducido */
+  .projects-container {
+    gap: 1.5em;
+  }
+  .project-title {
+    font-size: 3vw;
+  }
+  .project-tech,
+  .project-description,
+  .project-features {
+    font-size: 1.8vw;
   }
 }
